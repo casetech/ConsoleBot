@@ -42,25 +42,31 @@ class WMProcess():
         self.web.type(self.username, into='email')
         self.web.type(self.pw, into='password')
         self.web.click('Sign In')
-        self.web.go_to(self.xbox)
+        #change this line below for ps5, ps5_base, or xbox
+        self.web.go_to(self.ps5)
 
     def add_to_cart(self):
-        pass
+        self.web.click('Add to cart')
 
     def checkout(self):
-        pass
+        self.web.click('Check out')
 
     def delivery(self):
-        pass
+        self.web.click('Continue')
+        sleep(1)
+
 
     def confirm_address(self):
-        pass
+        self.web.click('Continue')
 
     def select_payment(self):
-        pass
+        self.web.click('Continue')
 
     def review_order(self):
-        pass
+        self.web.click('Review your order')
+
+    def place_order(self):
+        self.web.click('Place order')
 
     def main(self):
         self.open_browser()
@@ -70,4 +76,11 @@ if __name__ == '__main__':
     get_console = WMProcess()
     get_console.open_browser()
     get_console.login()
-    sleep(5)
+    get_console.add_to_cart()
+    get_console.checkout()
+    get_console.delivery()
+    get_console.confirm_address()
+    get_console.select_payment()
+    get_console.review_order()
+    get_console.place_order
+    sleep(10)
