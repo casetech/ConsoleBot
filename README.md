@@ -5,4 +5,4 @@ Python bot for purchasing consoles (ps5 or xbox series x).
 Update configs/credentials.conf with your username and password
 
 # Execute ConsoleBot
-python3 src/console.py
+python3 src/consoles.py
